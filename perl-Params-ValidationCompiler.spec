@@ -61,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes INSTALL
-#%{perl_vendorlib}/Params/*.pm
-#%{perl_vendorlib}/Params/ValidationCompiler
-#%{_mandir}/man3/*
+%{perl_vendorlib}/Params/ValidationCompiler.pm
+%{perl_vendorlib}/Params/ValidationCompiler
+%{_mandir}/man3/Params::ValidationCompiler*.3pm*
 %{_examplesdir}/%{name}-%{version}
