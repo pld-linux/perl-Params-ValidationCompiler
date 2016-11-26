@@ -6,25 +6,26 @@
 %define		pnam	ValidationCompiler
 %include	/usr/lib/rpm/macros.perl
 Summary:	Params::ValidationCompiler - Build an optimized subroutine parameter validator once, use it forever
+Summary(pl.UTF-8):	Params::ValidationCompiler - tworzenie zoptymalizowanego walidatora parametrów raz do wielokrotnego użycia
 Name:		perl-Params-ValidationCompiler
-Version:	0.13
+Version:	0.19
 Release:	1
-License:	artistic_2
+License:	Artistic v2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Params/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	e654da776110d5e821c43b2f30f03d68
+# Source0-md5:	cf7ec9a1899013ed1b4f80ee1817478d
 URL:		http://search.cpan.org/dist/Params-ValidationCompiler/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Eval-Closure
 BuildRequires:	perl-Exception-Class
-BuildRequires:	perl(Test2::Bundle::Extended)
-BuildRequires:	perl(Test2::Plugin::NoWarnings)
-BuildRequires:	perl(Test2::Require::Module)
-BuildRequires:	perl(Test::Without::Module)
+BuildRequires:	perl-Scalar-List-Utils >= 1.29
 BuildRequires:	perl-Specio >= 0.14
 BuildRequires:	perl-Test-Simple >= 1.302015
+BuildRequires:	perl-Test-Without-Module
+BuildRequires:	perl-Test2-Plugin-NoWarnings
+BuildRequires:	perl-Test2-Suite
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,8 +34,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This is very alpha. The module name could change. Everything could
 change. You have been warned.
 
-Create a customized, optimized, non-lobotomized, uncompromised, and thoroughly
-specialized parameter checking subroutine.
+Create a customized, optimized, non-lobotomized, uncompromised, and
+thoroughly specialized parameter checking subroutine.
+
+%description -l pl.UTF-8
+Ten moduł jest w głębokim stanie alfa - nazwa może się zmienić;
+wszystko może się zmienić. To ostrzeżenie.
+
+Tworzenie dostosowanych, zoptymalizowanych, bezkompromisowych i
+szczegółowo wyspecjalizowanych procedur sprawdzających parametry.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -60,7 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes INSTALL
+%doc Changes
 %{perl_vendorlib}/Params/ValidationCompiler.pm
 %{perl_vendorlib}/Params/ValidationCompiler
 %{_mandir}/man3/Params::ValidationCompiler*.3pm*
