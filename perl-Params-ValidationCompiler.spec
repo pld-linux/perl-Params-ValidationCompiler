@@ -25,7 +25,7 @@ BuildRequires:	perl-Specio >= 0.14
 BuildRequires:	perl-Test-Simple >= 1.302015
 BuildRequires:	perl-Test-Without-Module
 BuildRequires:	perl-Test2-Plugin-NoWarnings
-BuildRequires:	perl-Test2-Suite
+BuildRequires:	perl-Test2-Suite >= 0.000106
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
