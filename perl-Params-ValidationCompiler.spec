@@ -4,7 +4,6 @@
 #
 %define		pdir	Params
 %define		pnam	ValidationCompiler
-%include	/usr/lib/rpm/macros.perl
 Summary:	Params::ValidationCompiler - Build an optimized subroutine parameter validator once, use it forever
 Summary(pl.UTF-8):	Params::ValidationCompiler - tworzenie zoptymalizowanego walidatora parametrów raz do wielokrotnego użycia
 Name:		perl-Params-ValidationCompiler
