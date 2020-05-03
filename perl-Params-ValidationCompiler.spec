@@ -16,6 +16,7 @@ Source0:	http://www.cpan.org/modules/by-module/Params/%{pdir}-%{pnam}-%{version}
 URL:		https://metacpan.org/release/Params-ValidationCompiler
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl-Eval-Closure
 BuildRequires:	perl-Exception-Class
