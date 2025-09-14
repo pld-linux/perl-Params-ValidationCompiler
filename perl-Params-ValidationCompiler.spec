@@ -1,19 +1,19 @@
 #
 # Conditional build:
-%bcond_without	tests		# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	Params
 %define		pnam	ValidationCompiler
 Summary:	Params::ValidationCompiler - Build an optimized subroutine parameter validator once, use it forever
 Summary(pl.UTF-8):	Params::ValidationCompiler - tworzenie zoptymalizowanego walidatora parametrów raz do wielokrotnego użycia
 Name:		perl-Params-ValidationCompiler
-Version:	0.30
+Version:	0.31
 Release:	1
 License:	Artistic v2.0
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Params/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	f7746a98cab3d7a246372379d4658a4e
-URL:		https://metacpan.org/release/Params-ValidationCompiler
+Source0:	https://www.cpan.org/modules/by-module/Params/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	15528055f3f53c8cfebbee1f928dec07
+URL:		https://metacpan.org/dist/Params-ValidationCompiler
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
